@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio HTML Ale Daldin</title>
+</head>
+
+<body>
+    <header>
+        <img src="/img/server-img.jpeg" width="100%">
+    </header>
+    <h1>NEXT IT services</h1>
+    <h2><i>Developing the future</i></h2>
+    <p>"Sed ut perspiciatis unde omnis iste natus error <b>sit</b> voluptatem accusantium doloremque laudantium,
+        totam rem <i>aperiam,</i> eaque ipsa quae ab illo <u>inventore</u> veritatis et quasi architecto beatae
+        vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed
+        quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui
+        dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora
+        incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum
+        exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel
+        eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui
+        dolorem eum fugiat quo voluptas nulla pariatur?"</p>
+    <nav>
+        <ul>
+            <li><a href="http://www.google.com" target="blank">Google</a></li>
+            <li><a href="mailto:info@next.com" target="blank">E-mail us</a></li>
+            <li><a href="tel:1-847-555-5555" target="blank">Call us</a></li>
+        </ul>
+    </nav>
+
+    <p>HD on Stock</p>
+    <table border="1">
+        <tr>
+            <th scope="col" class="hd-size">Tamaño del disco según fabricante</th>
+            <th scope="col" class="hd-rea-size">Tamaño real del disco</th>
+        </tr>
+        <tr>
+            <td>160 GB</td>
+            <td>149 GB</td>
+        </tr>
+        <tr>
+            <td>250 GB</td>
+            <td>232 GB</td>
+        </tr>
+        <tr>
+            <td>320 GB</td>
+            <td>298 GB</td>
+        </tr>
+        <tr>
+            <td>520 GB</td>
+            <td>465 GB</td>
+        </tr>
+        <tr>
+            <td>1000 GB (1TB)</td>
+            <td>931 GB</td>
+        </tr>
+        <tr>
+            <td>1500 GB (1.5TB)</td>
+            <td>1396 GB</td>
+        </tr>
+        <tr>
+            <td>2000 GB (2TB)</td>
+            <td>1862 GB</td>
+        </tr>
+        <tr>
+            <td>3000 GB (3TB)</td>
+            <td>2793 GB</td>
+        </tr>
+
+    </table>
+
+    <h2>Let's know each other!</h2>
+    <div>
+        <label for="name">Name (4 to 8 characters):</label>
+        <input type="text" id="name" name="name" required minlength="4" maxlength="8" size="10"><br>
+        <label for="pass">Password (8 characters minimum):</label>
+        <input type="password" id="pass" name="password" minlength="8" required><br>
+        <label for="start">Birthday</label>
+        <input type="date" id="birthday" name="birth-date" min="1900-01-01" max="2000-12-31"><br>
+        <label for="email">Enter your e-mail</label>
+        <input type="email" id="email" size="30" required><br>
+        <p>Please Select your gender</p>
+        <div>
+            <input type="checkbox" id="female" name="female" checked>
+            <label for="female">Female</label>
+        </div>
+        <div>
+            <input type="checkbox" id="male" name="male">
+            <label for="male">Male</label>
+        </div>
+        <div>
+            <input type="checkbox" id="other" name="other">
+            <label for="other">Other</label>
+        </div><br>
+        <p>Please select your preferred contact method:</p>
+        <div>
+            <input type="radio" id="contactChoice1" name="contact" value="email">
+            <label for="contactChoice1">Email</label>
+
+            <input type="radio" id="contactChoice2" name="contact" value="phone">
+            <label for="contactChoice2">Phone</label>
+
+            <input type="radio" id="contactChoice3" name="contact" value="mail">
+            <label for="contactChoice3">Mail</label>
+        </div><br>
+        <label for="avatar">Choose a profile picture:</label><br>
+        <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg"> <br>
+        <p>Choose your color</p>
+        <div>
+            <input type="color" id="head" name="head" value="#e66465">
+        </div><br>
+        <p>Select your country and region</p>
+        <label for="country-select">Country</label>
+        <select id="country-select">
+            <optgroup label="Country">
+                <option>Spain</option>
+                <option>Argentina</option>
+            </optgroup>
+            <optgroup label="Provinces of Spain">
+                <option>Barcelona</option>
+                <option>Madrid</option>
+                <option>Valencia</option>
+                <option>Sevilla</option>
+                <option>Alicante</option>
+                <option>Málaga</option>
+            </optgroup>
+            <optgroup label="Provinces of Argentina">
+                <option>Buenos Aires</option>
+                <option>Córdoba</option>
+                <option>San Luis</option>
+                <option>San Juan</option>
+                <option>Tucuman</option>
+                <option>Entre Rios</option>
+            </optgroup>
+        </select>
+        <!-- <select>
+            <p>Country</p>
+            <option value=”spain”>Spain</option>
+            <option value=”argentina”>Argentina</option>
+            <option value=”italy”>Italy</option>
+            <option value=”brasil”>Brasil</option>
+        </select>
+        <p>Region</p>
+        <select>
+            <option value=”barcelona”>Barcelona</option>
+            <option value=”buenos-aires”>Buenos Aires</option>
+            <option value=”bolonia”>Bolonia</option>
+            <option value=”brasilia”>Brasilia</option>
+        </select> -->
+    </div>
+
+    <h2>Who we are</h2>
+    <ol>
+        <li>
+           <p><a href="about.html" target="blank">Alejandra Daldin</a></p>
+        </li>
+        <li>
+            <p>Alvaro Tejedor</p>
+        </li>
+        <li>
+            <p>Axel Brigo</p>
+        </li>
+        <li>
+            <p>Diego Medrano</p>
+        </li>
+        <li>
+            <p>Elena Rodriguez</p>
+        </li>
+        <li>
+            <p>Lísel Olivares</p>
+        </li>
+        <li>
+            <p>Luci</p>
+        </li>
+        <li>
+            <p>Manu Lope</p>
+        </li>
+        <li>
+            <p>Martin Alfredo Yela</p>
+        </li>
+        <li>
+            <p>Milagros Chamorro</p>
+        </li>
+        <li>
+            <p>Nilton</p>
+        </li>
+        <li>
+            <p>Pedro Acuña Ciudad</p>
+        </li>
+        <li>
+            <p>Pedro Matas Ortega</p>
+        </li>
+    </ol>
+
+    <footer>
+        <a href="#top">Go to top</a>
+    </footer>
+
+</body>
+
+</html>
