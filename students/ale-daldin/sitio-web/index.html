@@ -78,7 +78,7 @@
         <input type="text" id="name" name="name" required minlength="4" maxlength="8" size="10"> 
         <label for="pass">Password (8 characters minimum):</label>
         <input type="password" id="pass" name="password" minlength="8" required> 
-        <label for="start">Birthday</label>
+        <label for="birthday">Birthday</label>
         <input type="date" id="birthday" name="birth-date" min="1900-01-01" max="2000-12-31"> 
         <label for="email">Enter your e-mail</label>
         <input type="email" id="email" size="30" required> 
@@ -108,10 +108,9 @@
         </div> 
         <label for="avatar">Choose a profile picture:</label> 
         <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg">  
-        <p>Choose your color</p>
-        <div>
-            <input type="color" id="head" name="head" value="#e66465">
-        </div> 
+        
+        <label for="color">Choose a color</label> 
+            <input type="color" id="color" name="color" value="#e66465">
         <p>Select your country and region</p>
         <label for="country-select">Country</label>
         <select id="country-select">
