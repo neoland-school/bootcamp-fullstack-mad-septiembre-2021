@@ -1,0 +1,45 @@
+/** {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+} **/
+
+.body {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.header {
+    display: flex;
+    background-color: rgb(254, 243, 146);
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.header-img {
+    height: 100px;
+}
+
+.article-img {
+    height:500px;
+}
+
+.nav-style {
+    background-color: rgb(255, 255, 255);
+}
+
+.main-style {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background-color: rgb(249, 244, 187);
+}
+
+.article-style {
+    background-color: rgb(255, 165, 165);
+}
+
+.button-style {
+    height: 100px;
+    width: 100px;
+}
