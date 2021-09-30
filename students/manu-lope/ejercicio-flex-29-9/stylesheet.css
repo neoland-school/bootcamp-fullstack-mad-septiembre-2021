@@ -10,13 +10,26 @@
  }**/
 
 
-.div_order{
+.div_container{
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around; 
+    font-size: 50px;
+    gap: 1rem;
+    
+}
+
+.div_size {
     border-radius: 30%;
     height: 350px;
     width: 350px;
-    display: inline-flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    display: flex;
+    justify-content: center; /**Esto debería estar centrando el texto pero no funciona**/
+    align-content: center; /**Esto debería estar centrando el texto pero no funciona**/
 }
 
 .div_1 {
