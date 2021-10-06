@@ -83,8 +83,25 @@ for(let i = 0; i<=8; i++){
     document.write(`<p>${icon[i]}`);
 };
 
-//Ver el msj de alvaro
+//Otra opción (Alex)
 
+const userInput = parseInt(prompt('enter a number'));
+let icon = '';
+for(let i = 0; i<userInput; i++){
+    icon+=(`<p>`);
+    for(let j = 0; j<=i; j++){
+        icon+= '*';
+    }
+    icon+=(`</p>`);
+}
+for(let i = userInput-1; i>0; i--){
+    icon+=(`<p>`);
+    for(let j = i; j>0; j--){
+        icon+= '*';
+    }
+    icon+=(`</p>`);
+}
+document.write(icon);
 
 
 // Ejercicio que calcule el valor de la sucesión de fibonacci de una variable. Implementar la solución con un while
@@ -106,6 +123,11 @@ while(nextNum < userInput){
 const numRows = parseInt(prompt('enter the number or rows'));
 const numCol = parseInt(prompt('enter the number or columns'));
 
-while(true){
-    document.write()
+let tableRow = document.write(`<tr>`);
+for(let i = 0; i<numRows; i++){
+    document.write(`<td></td>`);
+    for(let j = 0; j<numCol; j++){
+    document.write(`<td></td>`);
+    }
+    tableRow += document.write(`</tr>`);
 }
