@@ -88,3 +88,4 @@ for(let i = 0; i<=8; i++){
 
 
 // Ejercicio que calcule el valor de la sucesión de fibonacci de una variable. Implementar la solución con un while
+
