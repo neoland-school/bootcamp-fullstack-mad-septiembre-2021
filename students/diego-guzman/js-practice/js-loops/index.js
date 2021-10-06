@@ -89,3 +89,23 @@ for(let i = 0; i<=8; i++){
 
 // Ejercicio que calcule el valor de la sucesión de fibonacci de una variable. Implementar la solución con un while
 
+const userInput = parseInt(prompt('Enter a number'));
+let numOne = 0;
+let numTwo = 1;
+let nextNum = '';
+nextNum = numOne + numTwo;
+while(nextNum < userInput){
+    console.log(nextNum);
+    numOne = numTwo;
+    numTwo = nextNum;
+    nextNum = numOne + numTwo;
+}
+
+//Escribir un programa que solicite al usuario el número de filas y el número de columnas. Dibujar una tabla con las filas y columnas introducidas
+
+const numRows = parseInt(prompt('enter the number or rows'));
+const numCol = parseInt(prompt('enter the number or columns'));
+
+while(true){
+    document.write()
+}
