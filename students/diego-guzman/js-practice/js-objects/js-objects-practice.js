@@ -64,43 +64,43 @@
 
 // Crear un array de objetos coche
 
-let myCar = {
-    marca: 'mercedes',
-    modelo: 'AMG 45',
-    matricula: '2340HTD',
-    velocidadActual: 200,
-    encendido: false,
-}
-let myCar_two = {
-    marca: 'pagani',
-    modelo: 'zonda',
-    matricula: '1289ccc',
-    velocidadActual: 300,
-    encendido: true,
-}
-let myCar_three = {
-    marca: 'lamborgini',
-    modelo: 'huracan',
-    matricula: '6543aaa',
-    velocidadActual: 400,
-    encendido: true,
-}
-let myCar_four = {
-    marca: 'ford',
-    modelo: 'fiesta',
-    matricula: '2742bbb',
-    velocidadActual: 120,
-    encendido: false,
-}
-let myCar_five = {
-    marca: 'ford',
-    modelo: 'fiesta',
-    matricula: '2742bbb',
-    velocidadActual: 120,
-    encendido: false,
-}
+// let myCar = {
+//     marca: 'mercedes',
+//     modelo: 'AMG 45',
+//     matricula: '2340HTD',
+//     velocidadActual: 200,
+//     encendido: false,
+// }
+// let myCar_two = {
+//     marca: 'pagani',
+//     modelo: 'zonda',
+//     matricula: '1289ccc',
+//     velocidadActual: 300,
+//     encendido: true,
+// }
+// let myCar_three = {
+//     marca: 'lamborgini',
+//     modelo: 'huracan',
+//     matricula: '6543aaa',
+//     velocidadActual: 400,
+//     encendido: true,
+// }
+// let myCar_four = {
+//     marca: 'ford',
+//     modelo: 'fiesta',
+//     matricula: '2742bbb',
+//     velocidadActual: 120,
+//     encendido: false,
+// }
+// let myCar_five = {
+//     marca: 'ford',
+//     modelo: 'fiesta',
+//     matricula: '2742bbb',
+//     velocidadActual: 120,
+//     encendido: false,
+// }
 
-let myGarage = [myCar, myCar_two, myCar_three, myCar_four, myCar_five];
+// let myGarage = [myCar, myCar_two, myCar_three, myCar_four, myCar_five];
 
 // console.log(myGarage)
 
@@ -139,15 +139,94 @@ let myGarage = [myCar, myCar_two, myCar_three, myCar_four, myCar_five];
 
 // 7- Hacer una funcion que me devuelva la velocidad media de todos los coches
 
-let averageSpeed = 0;
+// let averageSpeed = 0;
 
-function speed(car){
-    car.filter(v=> averageSpeed+= v.velocidadActual)
-    let result = averageSpeed/car.length;
-    return result;
-}
+// function speed(car){
+//     car.filter(v=> averageSpeed+= v.velocidadActual)
+//     let result = averageSpeed/car.length;
+//     return result;
+// }
 
-console.log(speed(myGarage))
+// console.log(speed(myGarage))
 
 // 8- Escribe una función que dado un array bidimensional, devuelva un array con los valores de la diagonal
 
+// const myArray= [[2,3,4],[3,6,1],[8,4,5]];
+// let counterI = 0;
+// let counterJ= 0;
+// let diagonalArray =[];
+
+// function diagonal(arr){
+//     for(let i=0; i<arr.length; i++){
+//         for(let j=0; j<arr[i].length; j++){
+//            if(i===j){ 
+//                diagonalArray.push(arr[i][j])};
+//         }
+//     } return diagonalArray
+// }
+// console.log(diagonal(myArray));
+
+
+// Escribe una función que dado un string con una hora (EJ: 14:36:57) devuelva un objeto con las propiedades de hora, minutos y segundos del string
+
+// let timeNow = '14:36:57';
+// let time = {};
+
+// function timeProperties(str) {
+//     for(let i=0; i<str.length; i++){
+//         time.hour = str.charAt(0) + str.charAt(1);
+//         time.hour = str.charAt(3) + str.charAt(4);
+//         time.hour = str.charAt(6) + str.charAt(7);
+//     }
+
+// }
+//     console.log(time)
+
+
+// Escribe una función que dado un objeto y un string que representa el nombre de la propiedad de ese objeto, devuelva el valor de esa propiedad
+
+let myAuto= {
+    marca: 'ford',
+    modelo: 'fiesta',
+    matricula: '2742bbb',
+    velocidadActual: 120,
+    encendido: false,
+}
+
+function objectPropertyValue(obj,str){
+    if(obj.hasOwnProperty(str)===true){
+    console.log(obj.str);
+    }
+}
+
+console.log(objectPropertyValue(myAuto));
+
+
+
+// 3- Escribe una función que dado un objeto y un string que representa el nombre de la propiedad de ese objeto, 
+// elimine esa propiedad del objeto
+
+
+
+
+
+
+// 4- Escribe una función que imprima por pantalla el `nombre:valor` de cada propiedad de un objeto 
+// encapsulando cada propiedad por () 
+
+//Me imprime undefined
+
+// let myAuto= {
+//     marca: 'ford',
+//     modelo: 'fiesta',
+//     matricula: '2742bbb',
+//     velocidadActual: 120,
+//     encendido: false,
+// }
+
+// function objectContent(obj){
+//         for(let[prop, v] of Object.entries(obj)){
+//             console.log(`(${prop}): ${v}`);
+//         }
+// } 
+//  console.log(objectContent(myAuto))
