@@ -2,11 +2,12 @@
 
 const selectDiv = document.querySelector('.div__container');
 
-const selectButton = document.querySelector('.add__buton');
-const pText = document.createElement('p');
-pText.textContent ='created with JS';
+const selectButton = document.querySelector('.add__button');
 
-selectButton.addEventListener('click', e =>{
+
+selectButton.addEventListener('click', e => {
+    const pText = document.createElement('p');
+    pText.textContent = 'created with JS';
     selectDiv.appendChild(pText);
 })
 
