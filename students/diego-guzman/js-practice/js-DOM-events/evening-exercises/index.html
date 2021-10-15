@@ -8,16 +8,26 @@
     <title>JS DOM Events</title>
     <link rel="stylesheet" href="style.css">
 </head>
- 
+
 <body>
-    <div class="div__container">
-        <form class="form__page">
-            <input type="text" class="input" id="name__input">
-            <input type="number" class="input" id="age__input">
-            <input type="text" class="input" id="hobby__input">
-        </form>
+    <form novalidate  class="form__page"> 
+        <!-- novalidate evita la validación del formulario por el navegador  -->
+        <div>
+            <label for="name__input">NAME</label>
+            <input name ="name" type="text" class="input" id="name__input" placeholder="introduce your name">
+        </div>
+        <div>
+            <label for="age__input">AGE</label>
+            <input name ="age" type="number" min="0" max="150" class="input" id="age__input"  placeholder="introduce your age">
+        </div>
+        <div>
+            <label for="hobby__input">HOBBY</label>
+            <input name ="hobby" type="text" class="input" id="hobby__input" placeholder="introduce your hobby">
+        </div>
+        <button type="submit" id="submit__button">submit info</button>
+    </form>
+    <div data-info-container class="div__container">
     </div>
-    <button id="submit__button">submit info</button>
 
     <script src="app.js"></script>
 </body>

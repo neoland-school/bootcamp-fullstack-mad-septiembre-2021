@@ -10,6 +10,3 @@ selectButton.addEventListener('click', e => {
     pText.textContent = 'created with JS';
     selectDiv.appendChild(pText);
 })
-
-// 2. Contador: Crear un HTML con un botón (-) un p y otro botón (+). El p inicialmente mostrará 0. Cuando pulse en el + se deberá sumar uno al valor del p. Cuando pulse en el menos se deberá restar 1.
-// 3. Modificar el ejercicio 2 para que cuando el usuario refresque la página, el p se inicialice con el valor que había dejado antes
