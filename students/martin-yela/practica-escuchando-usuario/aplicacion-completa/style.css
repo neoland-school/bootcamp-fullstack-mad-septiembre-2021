@@ -1,0 +1,53 @@
+body{
+    background-color: black;
+    color: white;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.titulo {
+    width: 20%;
+}
+.description {
+    width: 30%;
+}
+.tarea_lista {
+    width: 40%;
+}
+li {
+    list-style: none;
+    color: black;
+    margin-bottom: 3px;
+}
+
+.tabla {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    margin-top: 50px;
+    min-height: 200px;
+}
+.simbolo > li {
+    display: inline-flex;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: red;
+    color: red;
+    justify-content: center;
+}
+.simbolo > li:active {
+    background-color: green;
+    color: green;
+}
+.simbolo {
+    display: flex;
+    flex-direction: column;
+}
+a:link {
+    background-color: green;
+    color: green;
+}
