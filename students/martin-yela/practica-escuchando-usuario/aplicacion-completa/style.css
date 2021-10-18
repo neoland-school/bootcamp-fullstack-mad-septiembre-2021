@@ -14,13 +14,18 @@ form {
 .description {
     width: 30%;
 }
-.tarea_lista {
-    width: 40%;
+span {
+    text-align: center;
 }
 li {
     list-style: none;
     color: black;
     margin-bottom: 3px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    font-size: 1.5rem;
+
 }
 
 .tabla {
@@ -30,24 +35,7 @@ li {
     margin-top: 50px;
     min-height: 200px;
 }
-.simbolo > li {
-    display: inline-flex;
-    width: 18px;
-    height: 18px;
-    border-radius: 50%;
-    background-color: red;
-    color: red;
-    justify-content: center;
-}
-.simbolo > li:active {
-    background-color: green;
-    color: green;
-}
-.simbolo {
-    display: flex;
-    flex-direction: column;
-}
-a:link {
-    background-color: green;
-    color: green;
+img {
+    width: 22px;
+    height: 22px;
 }
