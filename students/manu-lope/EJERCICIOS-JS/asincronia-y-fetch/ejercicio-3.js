@@ -51,7 +51,3 @@ button.addEventListener('click', e=>{
         });
     });
 });
-
-git checkout gh-pages
-git checkout master foo
-git commit -m 'Add file foo to gh-pages.'
