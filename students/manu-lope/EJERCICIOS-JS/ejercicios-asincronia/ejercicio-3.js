@@ -21,7 +21,7 @@ buttonDom = addEventListener('click', e => {
             counter++
         }
         else { counter++ }
-        
+
         if (counter === 11) {
             clearInterval(intervalo);
         }
