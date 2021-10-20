@@ -1,0 +1,19 @@
+.container__img{
+    width: 300px;
+    opacity: 50%;
+    src:"https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/restaurantes-de-moda-madrid-1619774290.jpg?crop=0.539xw:0.807xh;0.300xw,0.122xh&resize=640:*" ;
+}
+
+.container__img__label-texto{
+    position: absolute;
+    top: 0%;
+}
+.container{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    
+    width: 300px;
+    height: 600px;
+    border:green 1px solid;
+}

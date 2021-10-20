@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style-education-responsive.css">
+    <title>COURSES</title>
+</head>
+<body>
+    <div class="topBefore">
+        <form action="">
+            <fieldset>
+                <legend>Información de contacto</legend>
+                <label>Nombre completo
+                    <input type="text" name="nombre" id="my name"
+                   placeholder="Nombre" required> <input type="text" name="apellido" placeholder="Apellido" required>
+                </label>  
+                <label>Email
+                    <input type="email" name="" id=""placeholder="name.@domain.com" required>
+                </label>
+                <label>Contraseña
+                    <input type="password" name="contraseña" id="">
+                </label>
+                <label>
+                    <input type="tel" required>
+                </label>    
+                <label>Fecha de nacimiento
+                    <input type="date" name="fecha de nacmiento" id="fecha de nacimiento">
+                </label>   
+            </fieldset>
+            <div>
+                <legend>Preferencias</legend>
+                <label>Elige un color
+                    <input type="color" name="" id="">
+                </label>
+                <label>Elige los temas de interés</label><!--Para que el radio pueda elegirse acumulativamente tiene que aparecer no debe aparecer el name o bien tiene que tener cada input radio un name diferente-->
+                    
+                    <input type="radio"> Cine
+                    <input type="radio"> Música
+                    <input type="radio"> Pintura
+                    <input type="radio"> Escultura
+            
+                <label>Carga aquí tus archivos
+                    <input type="file" name="" id="">
+                </label>
+            </div>
+            <div> <!--esta es otra manera de enlazar el input con el label, en esta ocasión me interesa el label después del input, y por eso he enlazado de este modo. Para que el input y el label estén relacionados deben tener la misma palabra en el type y el for. Para que solo pueda elegirse una opción los dos input deben tener el mismo name-->
+                <input type="radio" name="consentimiento" id="">
+                <label for="radio">No doy mi consentimiento</label>
+                <input type="radio" name="consentimiento" id="">
+                <label for="radio">Doy mi consentimiento</label>
+                <input type="checkbox" name="" id="">
+                <label for="checkbok">Acepto las condiciones de privacidad</label>
+            </div>
+            <div>
+                <label for="pais">País de nacimiento</label>
+                <select name="pais" id="">
+                    <option value="AF">Afganistán</option>
+                    <option value="AL">Albania</option>
+                    <option value="DE">Alemania</option>
+                    <option value="AD">Andorra</option>
+                    <option value="ES" selected>España</option>
+                    <option value="US">Estados Unidos</option>
+                </select>
+                <label for="pais">Provincia</label>
+                <select name="Provincia" id="Provincia">
+                    <option value="1">La Rioja</option>
+                    <option value="2">Galicia</option>
+                    <option value="3">Navarra</option>
+                    <option value="4">País Vasco</option>
+                </select>
+                <label for="lugar de nacimiento">Lugar de nacimiento</label>
+                <select name="lugar de nacimiento" id="lugar de nacimiento">
+                    <optgroup label="País">
+                        <option value="SP">España</option>
+                        <option value="EEUU">Estados Unidos</option>
+                        <option value="AF">Afganistán</option>
+                        <option value="AL">Albania</option>
+                        <option value="DE">Alemania</option>
+                        <option value="AD">Andorra</option>            
+                    </optgroup>
+                    <optgroup label="Provincia">
+                        <option value="Cantabria">Cantabria</option>
+                        <option value="Castellón">Castellón</option>
+                        <option value="Ceuta">Ceuta</option>
+                        <option value="Ciudad Real">Ciudad Real</option>
+                        <option value="La Rioja">La Rioja</option>
+                    </optgroup>
+                </select>
+            </div>
+            <textarea name="descripcion"></textarea>
+            <input type="submit" value="Enviar">
+            </form> 
+
+        </form>
+    </div>  
+</body>
+</html>
+<!--https://codepen.io/BeanBaag/pen/mMJqma-->

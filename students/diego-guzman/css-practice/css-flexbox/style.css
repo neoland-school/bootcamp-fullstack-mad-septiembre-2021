@@ -6,7 +6,6 @@
 .page-container{
 min-height: 100vh;
 display: flex;
-flex-direction: row;
 flex-wrap: wrap;
 }
 .header-container{
@@ -62,11 +61,8 @@ display: flex;
 }
 
 .main-container{
-width: 60%;
+width: 75%;
 background-color: #efecec96;
-display: flex;
-flex-direction: column;
-}
 
 .article-container{
     display: flex;
