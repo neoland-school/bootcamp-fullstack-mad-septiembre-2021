@@ -69,6 +69,30 @@ async function getInfo(pais) {
 
     })
 }
+//Version Alex
+let countries = [];
+fetch('https://gist.githubusercontent.com/Yizack/bbfce31e0217a3689c8d961a356cb10d/raw/107e0bdf27918adea625410af0d340e8fc1cd5bf/countries.json')
+    .then(r=>r.json())
+    .then(d =>countries = d.countries);
+
+//version Async
+let countries = [];
+async function getInfo(pais) {
+    const r = await fetch('https://gist.githubusercontent.com/Yizack/bbfce31e0217a3689c8d961a356cb10d/raw/107e0bdf27918adea625410af0d340e8fc1cd5bf/countries.json');
+    const d = await r.json();
+    countries = d.countries;
+}
+getInfo();
+
+
+document.querySelector('.form__container').addEventListener('submit', e => {
+    e.preventDefault();
+    const userSearch = e.target.search__input.value;
+    const country = contries.find(c=> c.name_es === userSearch);
+    const pDOM = document.querySelector('p');
+    pDOM.textContent = `Nombre (EN): ${country.name_en}, Nombre(ES): ${country.name_es}, Prefijo ${country.dial_code}, Código: ${country.code}`;
+    
+})
 
 // 5. Refactorizar el código anterior para lograr que al introducir "Arg" o "arg" aparezca un listado con la información de todos los paises que empiecen por 'arg'
 
