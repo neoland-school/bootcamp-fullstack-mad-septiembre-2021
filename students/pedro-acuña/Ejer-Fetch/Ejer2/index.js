@@ -36,11 +36,14 @@
 
 let form = document.querySelector('.form');
 
-async function infoPais(){
+async function infoPais(){  //Async function no deberia englobar el evento.
+                            
     const r = await fetch ('https://gist.githubusercontent.com/Yizack/bbfce31e0217a3689c8d961a356cb10d/raw/107e0bdf27918adea625410af0d340e8fc1cd5bf/countries.json');
     const d = await r.json();
+    //let countries = d.countries;
+    //} cerramos la funcion async
    d.countries.forEach(element => {
-        form.addEventListener('submit',(e) => {
+        form.addEventListener('submit',(e) => {  // mejor con un .find
             
             e.preventDefault();
            
