@@ -121,15 +121,17 @@ fetch('https://gist.githubusercontent.com/Yizack/bbfce31e0217a3689c8d961a356cb10
 
 fetch('https://gist.githubusercontent.com/Yizack/bbfce31e0217a3689c8d961a356cb10d/raw/107e0bdf27918adea625410af0d340e8fc1cd5bf/countries.json')
     .then(result => result.json()) // me traigo el resultado de la lista y lo paso a json
-    .then(data => { //aca adentro es que va el bloque de codigo a ejecutar 
+    .then(data => countries = data.countries); //aca adentro es que va el bloque de codigo a ejecutar
 
-        let ingresar = document.getElementById('insertar');
-        let boton = document.getElementById('botonsito');
 
-        boton.addEventListener("click", e => {
-            let p = document.createElement('p');
-            document.body.appendChild(p);
-            p.textContent = e.name_es;
 
+    //escucho el submit del formulario para actualizar el resultado
+document.querySelector('form').addEventListener('submit', e => {
+    e.preventDefault();
+    const userSearch = e.target.search.value; // guardo el valor del input
+    const country = countries.find(c => c.name_es === userSearch);
+    const pDOM = document.querySelector('p');
+            pDOM.textContent = country !== undefined
+                 ? `Nombre (EN): ${country.name_en}, Nombre(ES): ${country.name_es}, Prefijo: ${country.dial_code}, Código: ${country.code}`
+                 : 'No se ha encontrado el país';
         })
-    });
