@@ -17,11 +17,21 @@ fetch('https://pokeapi.co/api/v2/pokemon?limit=150')
     .then(result => result.json())
     .then(data => {
         let arrayPoke = data.results;
-        console.log(arrayPoke);
-        const secondArray = arrayPoke.find(element => element.url);
-        fetch(secondArray)
+        console.log(arrayPoke); //array con los pokemon por nombre
+        //Hasta aquí funciona
+        let secondArray = arrayPoke.find(word => word.name); // sólo consigo algo con map, find o forEach
+        console.log(secondArray); // find(word => word.name) sólo me pilla el primero //
+                                 //forEach(word => word.name) da undefined
+                                 //map(word => word.name) // me crea una nueva array sólo con nombres
+        fetch(secondArray.url) 
             .then(result => result.json())
             .then(data => {
-                // arrayPoke.forEach(element => {
+                console.log('entro en funcion');
+                let pokeURL = data.results;
+                console.log(pokeURL) // da undefined
+                console.log('he llegado hasta aqui'); // da undefined
+                });
 
             });
+
+            // me voy a dormir, mañana será otro día.
