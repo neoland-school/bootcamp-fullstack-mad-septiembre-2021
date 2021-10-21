@@ -1,0 +1,55 @@
+// Ejercicio 1: Recuperar la información de pikachu del API de pokemon y mostrar en la web su imagen frontal y su nombre
+// Ejercicio 2: Construcción de la aplicación de POKEDEX:
+// Vamos a construir una aplicación para mostrar una pokedex (ver imagen de ejemplo de diseño). La pokedex:
+//  - Mostrará el listado con los primeros 150 pokemons en orden. Para cada pokemon se mostrará:
+//        * Imagen frontal del pokemon
+//        * Nombre del pokemon
+//        * Tipo del pokemon
+//  - Se añadirá un buscador que cuando el usuario vaya escribiendo el nombre, en la lista solo aparecerán los que contengan el texto buscado en su nombre.
+//  - (NO ES TRIVIAL) Al hacer click en un pokemon desaparecerá el listado y se mostrará información detallada de ese pokemon (Elegir algunos datos como el ataque)
+//  Para obtener los datos utilizaremos el API de https://pokeapi.co/. En concreto necesitaremos obtener datos de las siguientes URL’s:
+//  - https://pokeapi.co/api/v2/pokemon?limit=150 => devuelve el listado de los 150 primeros pokemon con su nombre y la URL del API que contiene su información.
+//  - Con la URL de cada pokemon obtendremos la información detallada de ese pokemon. Tendremos que utilizar esa URL para obtener esos datos para la pokedex
+
+fetch('https://pokeapi.co/api/v2/pokemon?limit=150')
+    .then(result => result.json())
+    .then(data => {
+        //console.log(data.results[0].url); // Recorremos array y seleccionamos de que elemento queremos la URL (con el . accedemos a los valores del objeto)
+        let arrayPoke = data.results;
+        console.log(arrayPoke);
+        const pikaPi = arrayPoke.find(element => element.name.toLowerCase() === 'pikachu');
+        console.log(pikaPi);
+        // const pikaPiURL = pikaPi.url;
+        fetch(pikaPi.url)
+            .then(result => result.json())
+            .then(data => {
+                console.log(data);
+                let arrayPikaPi = data.results;
+                console.log(arrayPikaPi);
+                const sprite = data.sprites.front_default;
+                const name = data.name;
+                const type = data.types[0].type.name;
+                console.log(sprite);
+                let creoContainer = document.createElement('div');
+                let creoDiv = document.createElement('div');
+                let creoImg = document.createElement('img');
+                let creoName = document.createElement('p');
+                let creoType = document.createElement('p')
+                creoImg.src = sprite;
+                creoName.textContent = name;
+                creoType.textContent = type;
+
+
+                document.body.appendChild(creoContainer);
+                creoContainer.appendChild(creoDiv)
+                creoDiv.appendChild(creoImg);
+                creoDiv.appendChild(creoName);
+                creoDiv.appendChild(creoType);
+                creoContainer.classList.add('cardContainer__style');
+                creoDiv.classList.add('card__style');
+                
+            })
+        
+    });
+
+
