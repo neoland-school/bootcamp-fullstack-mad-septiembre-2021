@@ -11,13 +11,13 @@
 //  - https://pokeapi.co/api/v2/pokemon?limit=150 => devuelve el listado de los 150 primeros pokemon con su nombre y la URL del API que contiene su información.
 //  - Con la URL de cada pokemon obtendremos la información detallada de ese pokemon. Tendremos que utilizar esa URL para obtener esos datos para la pokedex
 
-fetch('https://pokeapi.co/api/v2/pokemon?limit=15000')
+fetch('https://pokepoke-pokemon.free.beeceptor.com/poke-get')
     .then(result => result.json())
     .then(data => {
         //console.log(data.results[0].url); // Recorremos array y seleccionamos de que elemento queremos la URL (con el . accedemos a los valores del objeto)
         let arrayPoke = data.results;
         console.log(arrayPoke);
-        const pikaPi = arrayPoke.find(element => element.name.toLowerCase() === 'feraligatr');
+        const pikaPi = arrayPoke.find(element => element.name.toLowerCase() === 'bulbasaur');
         console.log(pikaPi);
         // const pikaPiURL = pikaPi.url;
         fetch(pikaPi.url)
