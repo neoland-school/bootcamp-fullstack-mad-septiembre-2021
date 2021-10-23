@@ -1,0 +1,23 @@
+.cards {
+    text-align: center;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 5px 5px 15px 5px #000000;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 20px;
+}
+.cards:hover .imageBack{
+    display: block;
+}
+.cards:hover .imageFront{
+    display: none;
+}
+.imageBack {
+    display: none;
+}
