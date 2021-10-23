@@ -1,0 +1,15 @@
+body{
+    display: flex;
+    flex-direction: row;
+}
+
+body > *{
+    margin-right: 2em;
+}
+
+.input__submit{
+    height: 2em;
+}
+.input__digimon__submit{
+    height: 2em;
+}
