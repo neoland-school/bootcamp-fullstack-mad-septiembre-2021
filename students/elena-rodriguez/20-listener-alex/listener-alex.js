@@ -43,15 +43,16 @@ if (ultimoValor !== null  ){
 botonMas.addEventListener('click', () => {   //cuando se haga click en el boton +
     let contenidoP = texto.textContent;    // el parrafo llamado texto le metemos textContent
     let contenido = parseInt(contenidoP);  // parseamos para que su tipo de dato sea numérico
-    contenido = contenido + 1;    //le decimos que tendrá que sumar uno cada vez
+    contenido += 1;    //le decimos que tendrá que sumar uno cada vez
     texto.textContent = contenido;   //le decimos que el resultado se meta en el parrafo
    localStorage.setItem('resultado', contenido);   //le decimos que lo guarde en el localStore     
 })
 
-botonMenos.addEventListener('click', () => {
+botonMenos.addEventListener('click', (e) => {
+    console.log(e);
     let contenidoPmenos = texto.textContent;
     let contenidoMenos = parseInt(contenidoPmenos);
-    contenidoMenos = contenidoMenos - 1;
+    contenidoMenos -= 1;
     texto.textContent = contenidoMenos; //aquí le estamos diciendo que meta el resultado de contenido como un textContent.
     localStorage.setItem('resultado', contenidoMenos);
    
@@ -93,12 +94,12 @@ botonMenos.addEventListener('click', () => {
     
     
     
-    listaTareasCreadas = localStorage.getItem('submit', (e) => {
-        añadirTarea);
-    }
+    // listaTareasCreadas = localStorage.getItem('submit', (e) => {
+    //     añadirTarea);
+    // }
     
     
-    let listaTareasCreadas = localStorage.getItem('añadirDescripcion')
+    // let listaTareasCreadas = localStorage.getItem('añadirDescripcion')
     
     
     
@@ -114,14 +115,14 @@ botonMenos.addEventListener('click', () => {
     
     
     // creo un listado para cada boton
-    let listaTerminada = document.createElement('ul');
-    let listaTerminadaLi = document.createElement ('li');
+    // let listaTerminada = document.createElement('ul');
+    // let listaTerminadaLi = document.createElement ('li');
     
     
-    let listaPendiente = document.createElement ('ul');
+    // let listaPendiente = document.createElement ('ul');
     
     
-    let listaTodas = document.createElement('ul');
+    // let listaTodas = document.createElement('ul');
     
     
     
