@@ -4,8 +4,13 @@
 class DivContainer extends React.Component{
     render(){
         return <React.Fragment>
-                <Container>
-                </Container>
+                <Container/>
+                <Container/>
+                <Container/>
+                <Container/>
+                <Container/>
+                <Container/>
+                <Container/>
             </React.Fragment>
         }
 }

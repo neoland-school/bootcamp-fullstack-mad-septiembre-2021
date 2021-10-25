@@ -4,7 +4,9 @@
 .div__container{
    border: 2px solid black;
    width: 30em;
+
 }
+
 .hastag__individual__container{
    display: flex;
    align-items: center;
