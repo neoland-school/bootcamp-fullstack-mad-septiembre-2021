@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.div_card {
+    width: 300px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 50px;
+    -webkit-box-shadow: 1px 2px 15px 6px #000000;
+    box-shadow: 1px 2px 15px 6px #000000;
+}
+
+.div_img {
+    width: 100%;
+}
+
+#main__react {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.container_tags {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tags {
+    margin: 0 auto;
+    background-color: gray;
+    align-items: center;
+    border-radius: 20px;
+    padding: 6px;
+    margin: 6px;
+}
+
+.flip_vertical {
+    transform-style: preserve-3d;
+    transition: transform 0.4s ease 0s;
+}
+
+.flip_vertical:hover {
+    transform: rotateX(180deg);
+}
