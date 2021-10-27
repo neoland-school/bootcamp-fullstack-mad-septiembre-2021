@@ -1,0 +1,94 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#root{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.search__input{
+    margin: 2em 0em 1em 0em;
+}
+
+.airport__container{
+border: solid 2px black;
+margin: 0.5em;
+width: 15em;
+height: 10em;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.name__container{
+    display: flex;
+    flex-direction:column;
+    flex-wrap: wrap;
+    border: 2px solid grey;
+    margin: 0em 0.2em;
+    color: white;
+}
+.name__container .airport__container{
+    background-color: #085f63;
+}
+.p__name{
+    text-align: center;
+    width: 100%;
+    background-color: burlywood;
+    color: black;
+}
+.country__container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border: 2px solid grey;
+    margin: 0em 0.2em;
+   
+}
+.country__container .airport__container{
+    background-color: #49beb7;
+}
+.p__country{
+    text-align: center;
+    width: 100%;
+    background-color: burlywood;
+}
+.city__container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border: 2px solid grey;
+    margin: 0em 0.2em;
+   
+}
+
+.city__container .airport__container{
+    background-color: #facf5a;
+}
+.p__city{
+    text-align: center;
+    width: 100%;
+    background-color: burlywood;
+}
+.state__container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border: 2px solid grey;
+    margin: 0em 0.2em;
+   
+}
+.state__container .airport__container{
+    background-color: #ff5959;
+}
+.p__state{
+    text-align: center;
+    width: 100%;
+    background-color: burlywood;
+}
+
+

@@ -1,0 +1,51 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+ }
+ 
+ #main__div{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+ }
+
+ .button{
+     width:15%;
+ }
+ 
+ .card__img{
+    width: 100%;
+ }
+ .div__container{
+    border: 2px solid black;
+    width: 25em;
+    margin: 2em 1em 1em 1em;
+ }
+ .hastag__individual__container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: antiquewhite;
+    width: 20%;
+    height: 2em;
+    border: black 1px solid;
+    border-radius: 3em;
+ }
+ .hastag__container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0.5em
+ }
+ 
+  .vertical:hover{
+    transform: rotateY(360deg);
+    transition: 1.5s ease-in-out;
+  }
+
+  .horizontal:hover{
+    transform: rotateX(360deg);
+    transition: 1.5s ease-in-out;
+  }
