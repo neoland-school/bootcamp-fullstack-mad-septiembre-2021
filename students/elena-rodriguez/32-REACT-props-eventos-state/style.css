@@ -1,0 +1,133 @@
+#root{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.container_sevilla{
+    width: 50%;
+    height: auto;
+  font-family: 'Courier New', Courier, monospace;
+  color: white;
+  color: transparent;
+
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  text-shadow: 0px 3px 3px rgba(255,255,255,0.5);
+
+    background-color: cadetblue;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    
+}
+.container_barcelona{
+    width: 50%;
+    height: auto;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    background-color: cadetblue;
+    color: transparent;
+    
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    text-shadow: 0px 3px 3px rgba(255,255,255,0.5);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+.container_madrid{
+    width: 50%;
+    height: auto;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    background-color: cadetblue;
+    color: transparent;
+ 
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    text-shadow: 0px 3px 3px rgba(255,255,255,0.5);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+.container_cities{
+    width: 80%;
+    height: auto;
+   
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    background-color: crimson;
+    color: transparent;
+ 
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    text-shadow: 0px 3px 3px rgba(255,255,255,0.5);
+ 
+    
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+input {
+    position:relative; 
+    width: 80%;
+    height: 4rem;
+    font-size: 1em;
+    text-align:center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+.container_cities_List {
+    width: 80%;
+    height: auto; 
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    text-align: center;
+    background-color: rgba(123, 20, 220, 0.849);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+
+    color: transparent;
+    
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    text-shadow: 0px 3px 3px rgba(255,255,255,0.5);
+}
