@@ -1,0 +1,24 @@
+input {
+    outline: none;
+}
+
+.formul__email:hover {
+    background: rgb(0, 0, 0);
+    color:white;   
+}
+
+.formul__email:invalid {
+    border-width: 2px;
+    border-color: red;
+}
+
+.formul__email:focus {
+    border-width: 3px;
+    border-color: darkorange;
+}
+
+.formul__email:valid {
+    border-width: 3px;
+    border-color: green;
+}
+

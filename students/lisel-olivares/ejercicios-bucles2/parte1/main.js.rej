@@ -1,0 +1,11 @@
+diff a/students/lisel-olivares/ejercicios-bucles2/parte1/main.js b/students/lisel-olivares/ejercicios-bucles2/parte1/main.js	(rejected hunks)
+@@ -0,0 +1,8 @@
++const n1 = prompt ('Introcude un numero');
++const n2 = prompt ('Introduce otro numero');
++
++if (n1 > n2){
++    document.write (`<h1>${n1}</h1>`);
++}else if(n2 > n1){
++    document.write (`<h1>${n2}</h1>`);
++}
+\ No newline at end of file
