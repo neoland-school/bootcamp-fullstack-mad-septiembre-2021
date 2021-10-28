@@ -5,7 +5,7 @@ class App extends React.Component {
         return (
             <React.Fragment>
                 <AeropComponent>
-                    name = "iberia"
+
                 </AeropComponent>
             </React.Fragment>
         )
