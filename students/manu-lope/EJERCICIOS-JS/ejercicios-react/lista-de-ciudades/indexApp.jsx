@@ -1,5 +1,3 @@
-
-
 class App extends React.Component {
     constructor() {
         super()
@@ -21,13 +19,12 @@ async componentDidMount() {
 
     render() {
         return <React.Fragment>
-            {/* <City nombre={this.cities[2].ciudad} poblacion={this.cities[2].poblacion} /> */}
-            {this.state.citiesList.map((e) => <City nombre={e.city} poblacion={e.population}></City>)}
+            {this.state.citiesList.map((e, i) => <City nombre={e.city} poblacion={e.population} key={i}></City>)}
         </React.Fragment>
     }
 }
 ReactDOM.render(
     <App />,
     document.getElementById("react-container-jsx")
-    
+
 )
