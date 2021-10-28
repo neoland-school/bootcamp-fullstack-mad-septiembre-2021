@@ -1,0 +1,87 @@
+/* *{
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box;
+} */
+
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    align-items: center;
+}
+.main__tittle{
+    margin: 0;
+    text-align: center;
+    font-size: 3.5rem;
+    color: white;
+}
+.traffic-light__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: grey;
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    padding:1em;
+    
+}
+
+.traffic-light__light{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.traffic-light--text{
+    display: flex;
+    font-size: 2.5rem;
+    color: white;
+    padding:0.2em;
+}
+.green{
+    background-color: green;
+}
+
+.interAmb{
+    background-color:orange;
+    animation-name: intermitent;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes intermitent {
+    0% {opacity: 1.0;}
+    50% {opacity: 0.0;}
+    100% {opacity: 1.0;}
+}
+
+.amb{
+    background-color: rgb(231, 110, 29);
+}
+
+.red{
+    background-color: red;
+}
+
+.broken{
+    background-color: red;
+
+}
+
+.traffic-light--broken{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.img--stop{
+    width: 30%;
+    height: 30%;
+    background-repeat: no-repeat;
+}

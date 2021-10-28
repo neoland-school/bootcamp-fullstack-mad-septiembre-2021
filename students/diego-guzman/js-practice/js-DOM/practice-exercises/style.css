@@ -1,0 +1,33 @@
+/* .page__container{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.card__container{
+    display: flex;
+    flex-direction: column;
+    width: 30em;
+    height: 40em;
+    background-color: rgba(202, 202, 202, 0.692);
+}
+
+.city__name{
+    font-size: 2rem;
+    margin:0;
+    position: absolute;
+    color: white;
+    background-color: rgba(128, 128, 128, 0.61);
+    width:fit-content;
+    padding-left: 1em;
+}
+.city__description{
+    font-size: 1.5em;
+}
+
+.ul__container{
+    background-color: rgba(245, 245, 245, 0.692);
+    font-size: 1em;
+}
+.li__item{
+    margin: 0.5em 0em;
+} */

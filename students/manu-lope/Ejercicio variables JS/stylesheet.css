@@ -1,0 +1,15 @@
+
+
+.div__style {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-content:center;
+    margin-top: 1rem;
+    border: 0.1rem solid rgb(95, 92, 92);
+}
+
+.p__style {
+ padding: 1rem;
+}
