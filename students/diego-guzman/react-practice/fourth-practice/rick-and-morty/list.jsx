@@ -1,34 +1,33 @@
 class ListCharacters extends React.Component {
     constructor() {
         super()
+        
         this.state = {
-            data:[],
-            allData:[],
+            data: [],
+            // allData: [],
+            // AllCharacters:[],
         }
     }
+arr=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22];
 
     async componentDidMount() {
-            const r = await fetch ('https://rickandmortyapi.com/api/character')
-            const d = await r.json();
-            this.setState({ data: d.results });
-
-        let allCharacters=[];
-
-        for(let i=2; i<34; i++){
-            const retrieve = await fetch ('https://rickandmortyapi.com/api/character/?page={i}')
-            const answer = await retrieve.json();
-            allCharacters.push(answer);
-            console.log(allCharacters)
-            this.setState({ allData: allCharacters });
-
-        }
-        }
+        // for(let i=0; i<671; i++){
+        //     this.state.AllCharacters.push(i);
+        // }
+        const r = await fetch(`https://rickandmortyapi.com/api/character/${this.arr}`)
+        const d = await r.json();
+        this.setState({ data: d.results});
+        // console.log(this.state.AllCharacters)
         
+
+    }
+
+   
 
     render() {
         return <React.Fragment>
             <div className='allCharacters__container'>
-            {this.state.data.map(e =><CharacterCard key={e.id} data={e}></CharacterCard>)}
+                {this.state.data.map(e => <CharacterCard key={e.id} data={e}></CharacterCard>)}
             </div>
         </React.Fragment>
     }

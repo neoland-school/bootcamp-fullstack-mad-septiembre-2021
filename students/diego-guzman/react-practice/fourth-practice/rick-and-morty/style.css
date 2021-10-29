@@ -5,3 +5,8 @@ flex-direction: row;
 flex-wrap: wrap;
 
 }
+
+.character__container{
+    border: 1px solid black;
+    margin: 0.5em;
+}
