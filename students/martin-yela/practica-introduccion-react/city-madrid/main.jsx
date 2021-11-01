@@ -10,6 +10,7 @@
 class App extends React.Component {
     constructor(){
         super();
+        this.nuevoArr = [];
         this.state = {
             citiesArr : [],
             citiesArrOriginal : []
@@ -26,14 +27,15 @@ class App extends React.Component {
     }
     filterCity(k){
         let sentence = k.target.value.toLowerCase();
-        let coincidences = this.state.citiesArrOriginal.filter(l => l.city.toLowerCase(). includes(sentence));
+        let coincidences = this.nuevoArr.filter(l => l.city.toLowerCase(). includes(sentence));
         this.setState({citiesArr : coincidences})
     }
     filterCityRange(r){
         let sentence = r.target.value;
-        let coincidences = this.state.citiesArrOriginal.filter(l => l.population < sentence);
+        let coincidences = this.state.citiesArrOriginal.filter(l => l.population > sentence);
         console.log(sentence)
         this.setState({citiesArr : coincidences})
+        this.nuevoArr = coincidences
     }
 
     render() {

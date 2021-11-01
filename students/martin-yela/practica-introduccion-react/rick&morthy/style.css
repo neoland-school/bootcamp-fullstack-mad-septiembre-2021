@@ -39,3 +39,8 @@ img{
     width: 15px;
     height: 15px;
 }
+.boton {
+    width: 50px;
+    background-color: blue;
+    color: white;
+}
