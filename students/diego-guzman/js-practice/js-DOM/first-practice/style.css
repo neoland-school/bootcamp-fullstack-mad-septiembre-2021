@@ -1,0 +1,11 @@
+.card__container{
+width: 35em;
+height: 50em;
+background-color: aquamarine;
+display: flex;
+flex-direction: column;
+}
+
+.img__background{
+    width: fit-content;
+}

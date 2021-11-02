@@ -1,3 +1,185 @@
-.paige__container{
-    
+*{
+    padding: 0px;
+    margin:0px;
+    box-sizing: border-box;
 }
+.page__container{
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 7% auto auto auto auto 5%);
+    grid-template-areas: 
+    "header header header header"
+    "nav main main main"
+    "nav main main main"
+    "nav main main main"
+    "nav main main main"
+    "footer footer footer footer";
+    font-family: 'Roboto';
+}
+.header__container {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: repeat(2 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "main__logo menu-bar__container";
+    align-items: center;
+    background-color:rgba(2, 50, 121);
+  }
+
+.menu-bar__container{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    ". list-item list-item list-item .";
+}
+.menu-bar__list{
+    grid-area: list-item;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+    "item1 item2 item3";
+  }
+  .menu-bar__list > *{
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 800;
+    text-decoration: none;
+  }
+
+.menu-bar__list--item-1{
+    grid-area: item1;
+    justify-self: center;
+  }
+.menu-bar__list--item-2{
+    grid-area: item2;
+    justify-self: center;
+  }
+.menu-bar__list--item-3{
+    grid-area: item3;
+    justify-self: center;
+  }
+
+.main__container {
+    grid-area: main;
+  }
+.main__tittle{
+  margin: 2rem 0rem;
+  font-size: 2.5rem;
+}
+
+.main__logo{
+  padding: 2em 5.1em;
+  background-color: white;
+}
+
+.art > *{
+    width: 100vh;
+    text-align: center;
+  }
+
+.art-img{
+  border-radius: 0.6em;
+}
+
+.art-txt > *{
+  font-family: 'Roboto';
+  }
+
+.art__tittle{
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-style: italic;
+    margin-bottom: 1.2rem;
+    padding: 0.6rem 0rem; 
+    border-bottom: solid 2px rgb(0, 0, 0);
+  }
+.art__description{
+  font-size: 1.1rem;
+  margin-bottom: 0.8em;
+}
+
+.more-info{
+  background-color: #023279dc;
+  font-size: 1.2rem;
+  width: fit-content;
+  padding: 0.2em 0.6em;
+  border-radius: 0.6em;
+  border: none;
+  color: white;
+  margin-bottom: 1.3em;
+}
+
+.aside__container {
+    grid-area: nav;
+    background-color: #023279;
+    border-radius: 1em;
+    width: auto;
+    height: 20%;
+    margin: 6.8rem 2rem 0rem 2rem;
+    position: sticky;
+    top: 2rem;
+    
+  }
+
+
+.nav-bar__container--list > li{
+  margin: 2rem;
+  list-style-type: none;
+  font-weight: 600;
+}
+
+.nav-bar__list--item{
+color: rgb(255, 255, 255);
+}
+
+
+.footer__container {
+  grid-area: footer;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(2 1fr);
+  grid-template-areas: 
+  ". Facebook Twitter Instagram Pinterest Youtube ."
+  ". rights-reserved rights-reserved rights-reserved rights-reserved rights-reserved .";
+  }
+
+.rights-reserved{
+    grid-area: rights-reserved;
+    justify-self: center;
+}
+.logo{
+    border-radius: 50%;
+    background-position: center;
+    height: 2.2em;
+    width: 2.2em;
+    background-color:rgb(245, 244, 244);
+    background-size: cover;
+    background-repeat: no-repeat;
+    justify-self: center;
+}
+.Facebook{
+    grid-area: Facebook;
+    background-image: url(/assets/facebook.png);
+}
+.Twitter{
+  grid-area: Twitter;
+  background-image: url(/assets/twitter.png);
+}
+
+.Instagram{
+  grid-area: Instagram;
+  background-image: url(/assets/instagram.png);
+  background-size: 80%;
+}
+.Pinterest{
+  grid-area: Pinterest;
+  background-image: url(/assets/pinterest.png);
+}
+.Youtube{
+  grid-area: Youtube;
+  background-image: url(/assets/youtube.png);
+  background-size: 80%;
+} 

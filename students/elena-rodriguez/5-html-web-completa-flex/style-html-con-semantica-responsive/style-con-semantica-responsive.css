@@ -1,0 +1,35 @@
+:root {
+    --calido: #FF0075;
+    --azul: #172774;
+    --verde: #77D970;
+    --gris: #EEEEEE;
+
+    --fuente-principal: 3.8rem;
+
+body {
+    font-family: Cairo, sans-serif;
+}
+
+
+header {
+    background-color: var(--gris)
+}
+
+.header-logo {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+
+}
+
+h1 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 5 rem;
+    color: var(--calido);
+}
+
+.header-nav {
+    display: flex;
+    justify-content: center;
+}

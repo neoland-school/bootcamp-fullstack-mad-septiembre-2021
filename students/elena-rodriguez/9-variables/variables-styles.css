@@ -1,0 +1,11 @@
+.div__numeros {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: 2rem;
+    border-color: blueviolet;
+}
+
+.div__numerandos {
+    color: cornflowerblue;
+}
