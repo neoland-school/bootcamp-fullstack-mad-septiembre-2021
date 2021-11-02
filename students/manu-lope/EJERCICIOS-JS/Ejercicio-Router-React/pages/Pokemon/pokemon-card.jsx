@@ -1,17 +1,13 @@
 class PokemonCardComponent extends React.Component {
 
-constructor(props){
-    super(props)
-}
+    constructor(props) {
+        super(props)
+    }
 
 
-render(){
-    return (
-            <div>
-                <p>{this.props.name}</p>
-                <img src={this.props.sprite}></img>
-            </div>
-)
-}
-
+    render() {
+        return <React.Fragment>
+            <p>{this.props.name}</p>
+        </React.Fragment>
+    }
 }
