@@ -4,6 +4,7 @@ class LinksComp extends React.Component{
         return (
             <div>
             <ul>
+            <li><ReactRouterDOM.Link to="/Pokemon">Pokemon</ReactRouterDOM.Link></li>
                 <li><ReactRouterDOM.Link to="/Rick-and-Morty">Rick and Morty</ReactRouterDOM.Link></li>
                 <li><ReactRouterDOM.Link to="/">Main</ReactRouterDOM.Link></li>
             </ul>
