@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.main__container{
+    min-height: 90vh;
+}
+
+.header__container{
+    background-color: rgba(28, 82, 28, 0.616);
+}
+
+.nav__container ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+}
+
+.nav__container ul li{
+padding: 1em;
+}
+
+
+.sign-up__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.register__form{
+    display: flex;
+    flex-direction: column;
+}
+
+.register__form > *{
+    margin:0.5em;
+}
