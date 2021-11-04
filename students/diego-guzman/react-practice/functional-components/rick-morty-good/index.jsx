@@ -2,7 +2,7 @@ function App(){
 
     return(
         <React.Fragment>
-           <CharacterList></CharacterList>
+           <List></List>
         </React.Fragment>
         )
 }
