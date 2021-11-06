@@ -1,0 +1,9 @@
+.characters__container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.search__input{
+    width:15em;
+    height: 2em;
+}
