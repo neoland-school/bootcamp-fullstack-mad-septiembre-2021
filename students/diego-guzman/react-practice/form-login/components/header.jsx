@@ -5,7 +5,7 @@ function Header(){
                 <ul>
                     <li><ReactRouterDOM.Link to="/page1">Register</ReactRouterDOM.Link></li>
                     <li><ReactRouterDOM.Link to="/page2">Login</ReactRouterDOM.Link></li>
-                    <li><ReactRouterDOM.Link to="/page3">Home</ReactRouterDOM.Link></li>
+                    <li><ReactRouterDOM.Link to="/home">Home</ReactRouterDOM.Link></li>
                 </ul>
             </nav>
         </header>

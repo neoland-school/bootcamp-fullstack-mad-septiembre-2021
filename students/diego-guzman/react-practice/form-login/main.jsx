@@ -10,11 +10,11 @@ function App() {
                     </ReactRouterDOM.Route>
 
                     <ReactRouterDOM.Route path='/page2'>
-                        {/* <Login></Login> */}
+                        <Login></Login>
                     </ReactRouterDOM.Route>
 
-                    <ReactRouterDOM.Route path='/page3'>
-                        {/* HERE GOES HOME PAGE */}
+                    <ReactRouterDOM.Route path='/home'>
+                    <Home></Home>
                     </ReactRouterDOM.Route>
                 </ReactRouterDOM.Switch>
             </main>
