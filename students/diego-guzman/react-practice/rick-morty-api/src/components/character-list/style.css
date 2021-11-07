@@ -1,6 +1,8 @@
 .characters__container{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    min-height: 75vh;
 }
 
 .search__input{

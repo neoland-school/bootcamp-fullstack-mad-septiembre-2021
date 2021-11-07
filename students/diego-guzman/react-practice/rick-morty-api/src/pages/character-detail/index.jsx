@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import './style.css'
-
+import CharacterListPortal from '../../components/character-list-portal/character-list-portal'
 
 function CharacterDetailPage() {
 
@@ -32,14 +32,14 @@ function CharacterDetailPage() {
     return (<React.Fragment>
         <div className='character__detailed__container'>
             <img className='character__image' src={data.image} alt="character"></img>
+            <CharacterListPortal></CharacterListPortal>
             <div className='text__container'>
-                <h2>{data.name}</h2>
+                <h2 className='character__name'>{data.name}</h2>
                 <ul>
-                    <li>{data.id}</li>
-                    <li>{data.status}</li>
-                    <li>{data.species}</li>
-                    <li>{data.gender}</li>
-                    {episode.map((e, i) => <li key={i} className='character__episodio'>{e.name}</li>)}
+                    <li className={`character__status__detail ` + data.status}>{data.status}</li>
+                    <li className='character__species'>{data.species}</li>
+                    <li className='character__gender'>{data.gender}</li>
+                    <div className='episodes__container'>{episode.map((e, i) => <li key={i}><span className='episode__title'>{e.name}</span>: {e.episode}</li>)}</div>
                 </ul>
             </div>
         </div>

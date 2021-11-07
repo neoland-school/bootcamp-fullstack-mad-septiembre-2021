@@ -9,6 +9,7 @@ import {
 import CharacterListPage from './pages/character-list/index'
 import CharacterDetailPage from './pages/character-detail';
 import HomePage from './pages/home/home';
+import Header from './components/header/header';
 
 function App() {
   return (
@@ -19,9 +20,11 @@ function App() {
 
         <Switch>
           <Route path='/Characterlist'>
+            <Header></Header>
             <CharacterListPage></CharacterListPage>
           </Route>
           <Route path='/Character/:id'>
+          <Header></Header>
           <CharacterDetailPage></CharacterDetailPage>
           </Route>
           <Route path='/'>
