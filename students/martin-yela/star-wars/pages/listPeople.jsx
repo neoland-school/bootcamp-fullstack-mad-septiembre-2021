@@ -16,7 +16,6 @@ function ListPeople() {
     return (
         <div className= 'container_list'>
             {people.map((e,i )=> <CharacterCard key={i} datos={e}></CharacterCard>)}
-
         </div>
     )
 }
