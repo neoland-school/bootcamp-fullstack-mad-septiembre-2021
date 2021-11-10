@@ -1,0 +1,21 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.texto_1{
+    color: blue;
+}
+
+.texto_2{
+    color: red;
+}
+
+.texto_3{
+    color: purple;
+}
+
+.texto_4{
+    color: green;
+}
