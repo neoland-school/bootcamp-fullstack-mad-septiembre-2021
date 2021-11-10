@@ -34,7 +34,7 @@ botonsito.addEventListener('click', e => {
 
 // ejercicio 3
 
-/*
+
 const botonsito = document.getElementById('boton');
 
 
