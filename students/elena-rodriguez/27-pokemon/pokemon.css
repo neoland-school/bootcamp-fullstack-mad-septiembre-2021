@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    paddign: 0;
+    box-sizing: border-box;
+
+}
+.container_cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+   
+}
+
+.card {
+    width: 6em;
+    height: 6em;
+    box-shadow: 10px 5px 5px 5px #999;
+}
+
+.card_img {
+
+}
+
+
+

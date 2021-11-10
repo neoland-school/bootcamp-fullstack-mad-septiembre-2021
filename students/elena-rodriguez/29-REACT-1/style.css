@@ -1,0 +1,58 @@
+
+
+.contenedor {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+
+.div {
+    width: 80%;
+    height: auto;
+    
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+
+}
+
+.card{
+    width: 80%;
+    height: auto;
+    margin-bottom: 5em;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    background-color: thistle;
+    border-radius: 3em;
+    -webkit-box-shadow: 5px 5px 15px 5px #5E5E5E; 
+    box-shadow: 5px 5px 15px 5px #5E5E5E;
+}
+
+.imagen{
+    width: 80%;
+    height: auto;
+    margin-top: 3em;
+    border-radius: 5em;
+}
+
+.textos{
+    width: 60%;
+    height: auto;
+    margin-top: 2rem;
+    display: flex;
+    columns: auto;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+.parrafo {
+    margin-left: 3em;
+    margin-right: 3em;
+    margin-bottom: 3em;
+}

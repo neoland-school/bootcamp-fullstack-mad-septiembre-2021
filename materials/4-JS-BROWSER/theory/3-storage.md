@@ -62,8 +62,6 @@ const value = JSON.parse(sessionStorage.getItem('clave')); // devuelve el valor 
 // borrar
 sessionStorage.removeItem('clave'); // no se ve afectado por el tipo de datos
 ```
-<<<<<<< HEAD
-=======
 
 ## Cookies
 
@@ -112,4 +110,3 @@ cookieStore.set('name', 'value', options); // crea o actualiza una cookie
 cookieStore.delete('name'); // elimina una cookie
 
 ```
->>>>>>> 3303a497a19ae7214bfb71d9f5b9df7372195ace
