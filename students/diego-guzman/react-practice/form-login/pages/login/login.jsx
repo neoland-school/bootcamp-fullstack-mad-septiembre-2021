@@ -12,17 +12,17 @@ function Login() {
         let loginNickPassword = e.target.passwordInput.value;
 
 
-        loginInfo.forEach(e =>console.log(e.userNickname, e.userPassword))
-        console.log(loginNickInput, loginNickPassword)
+        // loginInfo.forEach(e =>console.log(e.userNickname, e.userPassword))
+        // console.log(loginNickInput, loginNickPassword)
 
-        // if (loginInfo.userNickname === loginInfo.some(loginNickInput) 
-        //     && loginInfo.userPassword === loginInfo.forEach(() => loginInfo.includes(loginNickPassword))) {
-        //     localStorage.setItem('sessionToken', JSON.stringify(loginNickInput));
-        //     History.push('/home')
-        // }
-        // else {
-        //     History.push('/home')
-        // }
+        if (loginInfo.userNickname === loginInfo.some(loginNickInput) 
+            && loginInfo.userPassword === loginInfo.forEach(() => loginInfo.includes(loginNickPassword))) {
+            localStorage.setItem('sessionToken', JSON.stringify(loginNickInput));
+            History.push('/home')
+        }
+        else {
+            History.push('/home')
+        }
     }
 
     return (

@@ -5,50 +5,52 @@ import './style.css'
 function CharacterList() {
 
     
-    // let currentCharacterSearch = '';
-    // let currentLocationSearch = '';
+    let currentCharacterSearch = '';
+    let currentLocationSearch = '';
     let [character, setCharacter] = useState([])
     let [filtered, setFiltered] = useState([])
     let [location, setLocation] = useState([])
-    // let originalCharacterList = [];
+    let originalCharacterList = [];
 
-    // function filteredInputs() {
+    function filteredInputs() {
 
-    //     let filteredCharacters = originalCharacterList.filter(c => {
-    //         c.name.toLowerCase().includes(currentCharacterSearch)
-    //             && c.location.name.toLowerCase().includes(currentLocationSearch)
-    //     })
-    //     console.log(filteredCharacters)
-    //     setFiltered(filteredCharacters)
-    // }
-
-    // function handleChange(e) {
-    //     currentCharacterSearch = e.target.value.toLowerCase();
-    //     filteredInputs();
-
-    // }
-
-    // function handleSubmit(e) {
-    //     e.preventDefault();
-    //     currentLocationSearch = e.target.locationInput.value;
-    //     filteredInputs();
-    // }
-
+        let filteredCharacters = originalCharacterList.filter(c => {
+                c.name.toLowerCase().includes(currentCharacterSearch)
+                && c.location.name.toLowerCase().includes(currentLocationSearch)
+            })
+        setFiltered(filteredCharacters)
+    }
 
     function handleChange(e) {
-        const info = e.target.value.toLowerCase();
-        const filteredByName = character.filter(c => c.name.toLowerCase().includes(info))
-        setFiltered(filteredByName);
+        currentCharacterSearch = e.target.value.toLowerCase();
+        filteredInputs();
 
     }
 
-    function handleSubmit(e){
+    function handleSubmit(e) {
         e.preventDefault();
-        const infoLocation = e.target.locationInput.value;
-        console.log(infoLocation)
-        const filteredByLocation = character.filter(c => c.location.name.toLowerCase().includes(infoLocation))
-        setFiltered(filteredByLocation);
+        currentLocationSearch = e.target.locationInput.value;
+        filteredInputs();
     }
+
+
+    //Estas funciones son los dos filtros 
+
+
+    // function handleChange(e) {
+    //     const info = e.target.value.toLowerCase();
+    //     const filteredByName = character.filter(c => c.name.toLowerCase().includes(info))
+    //     setFiltered(filteredByName);
+
+    // }
+
+    // function handleSubmit(e){
+    //     e.preventDefault();
+    //     const infoLocation = e.target.locationInput.value;
+    //     console.log(infoLocation)
+    //     const filteredByLocation = character.filter(c => c.location.name.toLowerCase().includes(infoLocation))
+    //     setFiltered(filteredByLocation);
+    // }
 
     useEffect(() => {
         fetch('https://rickandmortyapi.com/api/character')
@@ -60,9 +62,9 @@ function CharacterList() {
                     arrCharacters.push(i)
                 }
                 fetch(`https://rickandmortyapi.com/api/character/${arrCharacters}`)
-                    .then(response => response.json())
+                     .then(response => response.json())
                     .then(character => {
-                        setCharacter(character); setFiltered(character); /*originalCharacterList=character*/;
+                        setCharacter(character); setFiltered(character); 
                         
                         fetch('https://rickandmortyapi.com/api/location')
                             .then(r => r.json())
@@ -73,9 +75,11 @@ function CharacterList() {
                                     arrLocations.push(i)
                                 }
                                 fetch(`https://rickandmortyapi.com/api/location/${arrLocations}`)
-                                    .then(response => response.json())
+                                    .then(responseLocation => responseLocation.json())
                                     .then(location => setLocation(location))
+                                    originalCharacterList=character; 
                             })
+                            
                     })
             })
     }, [])
