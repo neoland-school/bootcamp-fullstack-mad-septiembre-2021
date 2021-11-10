@@ -1,0 +1,54 @@
+* {
+
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+
+}
+
+
+  ::-webkit-input-placeholder{
+    font-style: italic;
+
+  }
+  
+.form-box{
+
+width: 100%;
+display: inline-flex;
+flex-direction: row;
+justify-content: space-evenly;
+padding-top: 5em;
+
+}
+
+.email-input{
+
+border: 1px solid black;
+outline: none;
+
+}
+ 
+.email-input:valid{
+
+border: 2px solid green ;
+}
+
+.email-input:invalid{
+
+border: 2px solid red;
+
+}
+
+.email-input:focus{
+  border: 2px solid orange;
+}
+
+.email-input:active{
+  border: 2px solid orange;
+}
+
+.email-input:hover::-webkit-input-placeholder{
+  background-color: black;
+  color: white;
+}

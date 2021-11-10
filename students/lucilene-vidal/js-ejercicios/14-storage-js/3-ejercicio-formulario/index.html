@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio formulario</title>
+</head>
+
+<body>
+
+  <form>
+    <div>
+      <label for="NAME">Nombre</label>
+      <input id="NAME" name="name" type="text" placeholder="introduce su nombre" />
+    </div>
+
+    <div>
+      <label for="AGE">Nombre</label>
+      <input id="AGE" name="age" type="number" min="0" max="150" placeholder="Introduzca su edad" />
+    </div>
+
+    <div>
+      <label for="HOBBIE">Hobbie</label>
+      <input id="HOBBIE" name="hobbie" type="text" placeholder="Introduzca su hobbie" />
+    </div>
+  </form>
+  <div> data-info-contanier </div>
+
+  <script>
+    // Al pulsar el botón, debe guardarse dicha información en memoria.
+
+    function updateDOMStats(name, age, hobbie){
+      // esta función se encarga de actualizar el DOM con los valores del formulario
+      
+    }
+
+    // Inicializo con la información 
+    if(sessionStorage.getItem('age') !== null){
+      const storedNameValue = JSON.parse(sessionStorage.getItem('name'));
+      const storedAgeValue = JSON.parse(sessionStorage.getItem('age'));
+      const storedHobbieValue = JSON.parse(sessionStorage.getItem('hobbie'));
+    }
+
+    // Escucho el submit del formulario
+    document.querySelector('.form_container').addEventListener('submit', e => {
+      e
+    .preventDefault(); // elimino el comportamiento por defecto de los formularios, esto evita que se produzca la redirección a donde diga el action del form
+
+      const formElement = e.target; // tengo el nodo formulario
+      const inputName = formElement.name; // obtengo el input del formulario cuyo atributo name es igual a 'name'
+      sessionStorage.setItem('name', JSON.stringify(inputName.value)); // guarda en el session en valor del input
+
+      const inputAge = formElement.age; // obtengo el input del formulario cuyo atributo name es igual a 'age'
+      sessionStorage.setItem('age', JSON.stringify(inputAge.value)); // guardo en el session el valor del input
+      
+      const inputHobbie = formElement.hobbie;
+      sessionStorage.setItem('hobbie', JSON.stringify(inputHobbie.value)); 
+
+      const pNameDOM = document.createElement('p');
+      pNameDOM.textContent = `El último nombre introducido es:  ${inputName.value}`;
+
+      const pAgeDOM = document.createElement('p');
+      pAgeDOM.textContent = `El último nombre introducido es:  ${inputAge.value}`;
+    
+      const pHobbieDOM = document.createElement('p');
+      pHobbieDOM.textContent = `El último nombre introducido es:  ${inputHobbie.value}`;
+
+      const containerDOM = document.querySelector('[data-info-container]');
+      containerDOM.innerHTML = '';
+      containerDOM.appendChild(pNameDOM);
+      containerDOM.appendChild(pAgeDOM);
+      containerDOM.appendChild(pHobbieDOM);
+
+    });
+  </script>
+
+</body>
+
+</html>

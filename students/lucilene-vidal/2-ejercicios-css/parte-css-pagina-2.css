@@ -1,0 +1,238 @@
+
+.divContenedor 
+{   display: flex; 
+    flex-direction: row; 
+    flex-wrap: wrap;
+}
+
+ 
+.divA
+{
+
+border:1px solid black;
+width: 350px;
+height: 350px;
+margin:5px;
+padding:5px;
+background:#FF0000;
+display:flex;
+align-items: center;
+justify-content: center;
+
+}
+.divB
+{
+
+border:1px solid black;
+width: 350px;
+height: 350px;
+margin:5px;
+padding:5px;
+background:#FFE300;
+display:flex;
+align-items: center;
+justify-content: center;
+
+}
+.divC 
+{
+ 
+    border:1px solid black;
+    width: 350px;
+    height: 350px;
+    margin:5px;
+    padding:5px;
+    background:#5AFF00;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+    }
+
+
+.divD
+{
+    
+    border:1px solid black;
+    width: 350px;
+    height: 350px;
+    margin:5px;
+    padding:5px;
+    background:#00FFDA;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+    }
+
+.divE
+{
+    
+    border:1px solid black;
+    width: 350px;
+    height: 350px;
+    margin:5px;
+    padding:5px;
+    background:#ae00ff;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+   
+    }
+
+.divF 
+{
+     
+        border:1px solid black;
+        width: 350px;
+        height: 350px;
+        margin:5px;
+        padding:5px;
+        background:#0072FF;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    
+        }
+        
+     
+.divG
+{
+        
+        border:1px solid black;
+        width: 350px;
+        height: 350px;
+        margin:5px;
+        padding:5px;
+        background:#ffd517;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    
+        }
+
+.divH
+{
+        
+        border:1px solid black;
+        width: 350px;
+        height: 350px;
+        margin:5px;
+        padding:5px;
+        background:#FF00FB;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        
+        }
+.divI
+{
+         
+        border:1px solid black;
+        width: 350px;
+        height: 350px;
+        margin:5px;
+        padding:5px;
+        background:#FF006C;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+
+
+            }        
+
+.divJ
+{
+             
+        border:1px solid black;
+        width: 350px;
+        height: 350px;
+        margin:5px;
+        padding:5px;
+        background:#452121;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+            
+                } 
+                
+@media screen and (max-width:500px){   
+
+
+.divA {
+    order: 3;  
+ 
+       
+
+
+}    
+
+.divB {
+    order: 1;  
+ 
+    
+
+}    
+    
+.divC {
+    order: 2;  
+ 
+       
+
+
+}    
+
+.divD {
+    order: 5;  
+ 
+          
+
+
+}    
+
+.divE {
+    order: 6;  
+ 
+        
+
+
+}    
+
+.divF {
+    order: 4;  
+ 
+       
+
+
+}    
+    
+.divG {
+    order: 3;  
+ 
+   
+
+}    
+    
+.divH {
+    order: 7;  
+    
+
+
+}    
+    
+.divI {
+    order: 8;  
+ 
+        
+
+
+}    
+    
+.divJ {
+    order: 9;  
+ 
+         
+
+
+}    
+   } 

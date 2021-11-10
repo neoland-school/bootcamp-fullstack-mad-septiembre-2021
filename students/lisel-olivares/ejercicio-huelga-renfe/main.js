@@ -11,7 +11,7 @@ for (let i = 0; i < TRAIN_COUNT ; i++){ // solicito al usuario que por cada tren
 
 let trainCountDeparture = 0; // VAriable para saber cuantos trenes han salido
 
-for(let i=0; i<trainDeparture.length; i++){ // Cuento la cntidad de trenes que han salido
+for(let i=0; i<trainDeparture.length; i++){ // Cuento la cantidad de trenes que han salido
     if (trainDeparture[i]){
         trainCountDeparture++;
     }
