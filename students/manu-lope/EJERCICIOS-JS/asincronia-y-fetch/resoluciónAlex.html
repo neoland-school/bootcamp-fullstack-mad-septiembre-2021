@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <input type="text" name="search" placeholder="Introduzca nombre del país en español" />
+        <button type="submit">BUSCAR</button>
+    </form>
+    <p></p>
+    <script>
+
+
+        let countries = []; // variable para guardar los países
+
+
+// -------------------------- CON PROMESA ----------------------------------//
+
+
+        // recupero de manera asíncrona los paises y los asocio a una variable
+        fetch('https://gist.githubusercontent.com/Yizack/bbfce31e0217a3689c8d961a356cb10d/raw/107e0bdf27918adea625410af0d340e8fc1cd5bf/countries.json')
+            .then(r => r.json())
+            .then(d => countries = d.countries);
+
+        // escucho el submit del formulario para actualizar el resultado
+        document.querySelector('form').addEventListener('submit', e => {
+            e.preventDefault();
+            const userSearch = e.target.search.value; // guardo el valor del input
+            const country = countries.find(c => c.name_es.toLowerCase() === userSearch.toLowerCase());
+            const pDOM = document.querySelector('p');
+            pDOM.textContent = country !== undefined
+                ? `Nombre (EN): ${country.name_en}, Nombre(ES): ${country.name_es}, Prefijo: ${country.dial_code}, Código: ${country.code}`
+                : 'No se ha encontrado el país';
+        })
+
+
+//---------------------------- CON ASYNC/AWAIT -----------------------------//
+
+
+        async function getCountries(){
+            const r = await fetch('https://gist.githubusercontent.com/Yizack/bbfce31e0217a3689c8d961a356cb10d/raw/107e0bdf27918adea625410af0d340e8fc1cd5bf/countries.json');
+            console.log('Despues de recibir la respuesta'); 
+            const d = await r.json();
+            console.log('Despues de procesar los datos'); 
+            countries = d.countries;
+        }
+
+        getCountries();
+        document.querySelector('form').addEventListener('submit', e => {
+            e.preventDefault();
+            const userSearch = e.target.search.value; // guardo el valor del input
+            const country = countries.find(c => c.name_es.toLowerCase() === userSearch.toLowerCase());
+            const pDOM = document.querySelector('p');
+            pDOM.textContent = country !== undefined
+                ? `Nombre (EN): ${country.name_en}, Nombre(ES): ${country.name_es}, Prefijo: ${country.dial_code}, Código: ${country.code}`
+                : 'No se ha encontrado el país';
+        })
+
+    </script>
+
+
+</body>
+
+</html>
+

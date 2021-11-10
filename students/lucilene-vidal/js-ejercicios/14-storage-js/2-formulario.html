@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segundo formulario</title>
+</head>
+
+<body>
+
+    <form class="form__container">
+        <label for="name">Nombre</label>
+        <input id="name" type="text" name="name" placeholder="Introduzca su nombre">
+        <label for="age">Edad</label>
+        <input id="age" type="number" name="age" placeholder="Introduzca su edad">
+        <button type="submit">Añadir</button>
+        <ul>
+        </ul>
+    </form>
+
+    <script>
+        const formulario = document.querySelector('.form__container');
+        formulario.addEventListener('submit', e => {
+            e.preventDefault();
+            console.log(e);
+            const formElement = e.target; // tengo el nodo formulario
+            const inputName = formElement
+                .name; // obtengo el input del formulario cuyo atributo name es igual a 'name'
+            const inputAge = formElement
+                .age; // obtengo el input del formulario cuyo atributo age es igual a 'age'
+            const lista = document.createElement('li');
+            lista.textContent = inputName.value
+            const lista2 = document.createElement('li');
+            lista2.textContent = inputAge.value
+            document.querySelector('ul').appendChild(lista);
+            document.querySelector('ul').appendChild(lista2);
+        })
+    </script>
+
+
+
+</body>
+
+</html>

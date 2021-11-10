@@ -1,0 +1,1 @@
+//EJERCICIO 5: funcion que multiplique dos numeros sin usar el operador *
