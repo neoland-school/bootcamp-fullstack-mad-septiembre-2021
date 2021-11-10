@@ -49,7 +49,6 @@ botonMas.addEventListener('click', () => {   //cuando se haga click en el boton 
 })
 
 botonMenos.addEventListener('click', (e) => {
-    console.log(e);
     let contenidoPmenos = texto.textContent;
     let contenidoMenos = parseInt(contenidoPmenos);
     contenidoMenos -= 1;
@@ -93,7 +92,7 @@ botonMenos.addEventListener('click', (e) => {
 
     
     
-    
+
     // listaTareasCreadas = localStorage.getItem('submit', (e) => {
     //     añadirTarea);
     // }

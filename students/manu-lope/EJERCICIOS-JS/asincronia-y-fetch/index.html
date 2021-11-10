@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <input type="text"  placeholder="busca" name="search">
+        <button type="submit">BUscar</button>
+    </form>
+
+<script>
+    let countries = []; //variable para guardar los paises, es un array
+    // recupero los paises de manera asincrona y los asocio a una variable
+    fetch('https://gist.githubusercontent.com/Yizack/bbfce31e0217a3689c8d961a356cb10d/raw/107e0bdf27918adea625410af0d340e8fc1cd5bf/countries.json')
+    .then(result => result.json())
+    .then(d => countries = d.countries);
+
+    document.querySelector('form').addEventListener('submit', e=>{
+        e.preventDefault();//siempre se gace con submit
+        const userSearch = e.target.search.value; // guardo el valor del input
+        const country = countries.find(c => c.name_es.toLowerCase() === userSearch.toLowerCase()); //metemos toLowerCase para que las mayusulas y minusculas no interfieran
+        const pDOM = document.querySelector('p');
+        pDOM.textContent = `Nombre (EN): ${country.name_en}, Nombre(ES): ${country.name_es}`
+           
+    })
+
+</script>
+    <!-- <script src="/asincronia-y-fetch/ejercicio-1.js"></script> -->
+    <!-- <script src="/asincronia-y-fetch/ejercicio-2.js"></script> -->
+    <!-- <script src="/asincronia-y-fetch/ejercicio-4.js"></script> -->
+</body>
+
+</html>

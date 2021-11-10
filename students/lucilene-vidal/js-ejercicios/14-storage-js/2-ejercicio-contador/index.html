@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio Contador</title>
+</head>
+
+<body>
+
+    <button id="botonClick">Click + </button>
+    <p id="areaContador"></p>
+   
+    <button id="botonClickDos"> Click - </button>
+    <p id="areaContadorDos"></p>
+
+    <script type="text/javascript">
+        let botonElement = document.getElementById("botonClick");
+        let pElement = document.getElementById("areaContador");
+        let contador = 0;
+        let numeroPantalla = sessionStorage.getItem("numero");
+
+        if(numeroPantalla !== null){
+            pElement.textContent = numeroPantalla;
+        }
+
+
+        botonElement.onclick = function () {
+            contador++;
+            pElement.textContent = (contador);
+            sessionStorage.setItem("numero", contador);
+        }
+
+        let botonElementDos = document.getElementById("botonClickDos");
+
+        botonElementDos.onclick = function () {
+            contador--;
+            pElement.textContent = (contador);
+            sessionStorage.setItem("numero", contador);
+        }
+
+
+
+    </script>
+
+
+</body>
+
+</html>

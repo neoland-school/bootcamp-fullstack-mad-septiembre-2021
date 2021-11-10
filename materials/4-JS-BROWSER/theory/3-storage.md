@@ -110,3 +110,4 @@ cookieStore.set('name', 'value', options); // crea o actualiza una cookie
 cookieStore.delete('name'); // elimina una cookie
 
 ```
+
