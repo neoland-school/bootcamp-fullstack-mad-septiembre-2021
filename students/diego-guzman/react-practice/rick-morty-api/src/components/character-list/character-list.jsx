@@ -2,22 +2,42 @@ import React, { useEffect, useState } from "react"
 import CharacterCard from "../character-card/character-card";
 import './style.css'
 
+function generateCountArray(count){
+    const arrCharacters = [];
+                for (let i = 1; i <= count; i++) {
+                    arrCharacters.push(i)
+                }
+    return arrCharacters;
+}
+
+async function getLocations(){
+    let r = await fetch('https://rickandmortyapi.com/api/location');
+    const d = await r.json();
+    r= await fetch(`https://rickandmortyapi.com/api/location/${generateCountArray(d.info.count)}`)
+    return await r.json();
+}
+
+async function getCharacters(){
+    let r = await fetch('https://rickandmortyapi.com/api/character');
+    const d = await r.json();
+    r= await fetch(`https://rickandmortyapi.com/api/character/${generateCountArray(d.info.count)}`)
+     return await r.json();
+}
+
 function CharacterList() {
 
-    
-    let currentCharacterSearch = '';
-    let currentLocationSearch = '';
-    let [character, setCharacter] = useState([])
+
+    let currentCharacterSearch = ''; //pasar a state
+    let currentLocationSearch = ''; //pasar a state
     let [filtered, setFiltered] = useState([])
-    let [location, setLocation] = useState([])
-    let originalCharacterList = [];
+    let originalCharacterList = []; //pasar a state
 
     function filteredInputs() {
 
         let filteredCharacters = originalCharacterList.filter(c => {
-                c.name.toLowerCase().includes(currentCharacterSearch)
+            c.name.toLowerCase().includes(currentCharacterSearch)
                 && c.location.name.toLowerCase().includes(currentLocationSearch)
-            })
+        })
         setFiltered(filteredCharacters)
     }
 
@@ -53,35 +73,13 @@ function CharacterList() {
     // }
 
     useEffect(() => {
-        fetch('https://rickandmortyapi.com/api/character')
-            .then(r => r.json())
-            .then(d => {
-                let arrCharacters = [];
-                let characterNumber = d.info.count;
-                for (let i = 1; i <= characterNumber; i++) {
-                    arrCharacters.push(i)
-                }
-                fetch(`https://rickandmortyapi.com/api/character/${arrCharacters}`)
-                     .then(response => response.json())
-                    .then(character => {
-                        setCharacter(character); setFiltered(character); 
-                        
-                        fetch('https://rickandmortyapi.com/api/location')
-                            .then(r => r.json())
-                            .then(d => {
-                                let arrLocations = [];
-                                let locationNumber = d.info.count;
-                                for (let i = 1; i <= locationNumber; i++) {
-                                    arrLocations.push(i)
-                                }
-                                fetch(`https://rickandmortyapi.com/api/location/${arrLocations}`)
-                                    .then(responseLocation => responseLocation.json())
-                                    .then(location => setLocation(location))
-                                    originalCharacterList=character; 
-                            })
-                            
-                    })
-            })
+        getCharacters().then(cs => {
+            getLocations().then(l => {
+                let character = cs.map((c,i) =>  ({...c, location: l[i]}));
+                setFiltered(character);
+                originalCharacterList = character;
+            }); 
+        });             
     }, [])
 
 
