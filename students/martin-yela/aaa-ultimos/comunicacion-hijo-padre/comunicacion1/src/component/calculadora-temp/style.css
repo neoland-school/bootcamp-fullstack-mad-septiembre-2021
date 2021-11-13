@@ -1,0 +1,7 @@
+.input_container {
+    padding: 15px;
+    background: black;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
