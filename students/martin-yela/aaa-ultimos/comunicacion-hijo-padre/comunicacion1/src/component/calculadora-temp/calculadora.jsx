@@ -1,7 +1,7 @@
 // 3- Crear un componente calculadora de temperatura que tenga dos componentes del paso dos. Uno para celsius y otro para farenheit
 // 4- Crear en el componente dos funciones, uno que pase de celsius a farenhait y otro de farenhait a celsius
 // 5- Actualizar los componentes para que lo que si el usuario escribe en el input de celsius se actualizce su valor en el de farenhait y al revés según escribe el usuario
-import { Fragment, useState } from "react"
+import { useState } from "react"
 import Temperature from "../temperatura"
 import './style.css'
 
