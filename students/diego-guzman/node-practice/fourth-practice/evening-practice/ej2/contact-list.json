@@ -1,0 +1,19 @@
+[
+    {
+        "Alias":"C1",
+        "Nombre":"Pepito",
+        "Apellido": "Perez",
+        "Empresa": "Pepito&CO",
+        "Telf": ["+34 111222333","+34 222333444"]
+
+    },
+    {
+        "Alias":"C2",
+        "Nombre":"Juliana",
+        "Apellido": "Vainas",
+        "Empresa": "Julianas&CO",
+        "Telf": ["+34 3334444555","+34 444555666"]
+
+    }
+
+]
