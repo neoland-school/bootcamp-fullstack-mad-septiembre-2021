@@ -1,7 +1,7 @@
 import { MongoClient } from 'mongodb';
 import express from 'express';
 
-const URI = 'mongodb+srv://UserOne:{}@cluster0.lq3sz.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+
 
 const app = express()
 app.use(express.json());
