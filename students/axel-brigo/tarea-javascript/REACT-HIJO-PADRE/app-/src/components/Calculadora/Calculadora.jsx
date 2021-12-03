@@ -18,8 +18,6 @@ function Calculadora(props) {
         updateFarenheit(num)
         let prueba = num * 9 / 5 + 32;
         updateCelcius(prueba);
-
-
     }
 
 
