@@ -1,0 +1,15 @@
+.header__container{
+    font-size: 2em;
+}
+
+.character__detail{
+    margin: 4em 0em ;
+}
+.character__detail > *{
+    padding: 10px;
+    font-family: 'jedi-out';
+}
+.character__name{
+    color:white;
+    font-size: 2rem;
+}

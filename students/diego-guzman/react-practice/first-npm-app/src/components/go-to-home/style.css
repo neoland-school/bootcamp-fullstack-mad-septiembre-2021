@@ -1,0 +1,21 @@
+.link-to__home{
+display: flex;
+align-items: center;
+justify-content: center;
+font-family: 'jedi-out';
+margin-top: 8em;
+}
+
+.link-to__home p {
+    color:white;
+    padding: 0.5em;
+    border: 2px solid white;
+    border-radius: 2em;
+    width: fit-content;
+}
+
+.link-to__home p:hover {
+    color:black;
+    font-weight: 800;
+    background-color: white;
+}

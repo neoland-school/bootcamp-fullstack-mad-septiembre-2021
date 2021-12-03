@@ -1,0 +1,8 @@
+.card__container > *{
+    margin: 3em;
+    
+}
+.card__container{
+display: flex;
+justify-content: space-around;
+}

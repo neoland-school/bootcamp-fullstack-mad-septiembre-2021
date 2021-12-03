@@ -1,0 +1,10 @@
+.MuiToolbar-root {
+    display: flex;
+    justify-content: space-between;
+}
+
+.icons__container > *{
+
+    margin: 0em 1em;
+
+}

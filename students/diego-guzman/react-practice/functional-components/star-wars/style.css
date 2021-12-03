@@ -1,0 +1,11 @@
+#root{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.character__container{
+    width:10em;
+    height: 15em;
+    border: solid 2px black;
+    margin: 0.5em;
+}

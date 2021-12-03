@@ -1,0 +1,36 @@
+*{
+   /* margin:0; */
+   padding:0;
+   box-sizing: border-box;
+}
+
+#read-container-jsx{
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+}
+.card__img{
+   width: 100%;
+}
+.div__container{
+   border: 2px solid black;
+   width: 30em;
+   margin: 0em 1em 1em 1em;
+}
+.hastag__individual__container{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-color: antiquewhite;
+   width: 20%;
+   height: 2em;
+   border: black 1px solid;
+   border-radius: 3em;
+}
+.hastag__container{
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ justify-content: space-around;
+ margin: 0.5em
+}

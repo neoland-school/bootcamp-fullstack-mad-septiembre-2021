@@ -1,0 +1,13 @@
+
+.header__container{
+    font-size: 1em;
+}
+.all-characters__container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-family: 'jedi-out';
+}
+.link{
+    text-decoration: none;
+}
