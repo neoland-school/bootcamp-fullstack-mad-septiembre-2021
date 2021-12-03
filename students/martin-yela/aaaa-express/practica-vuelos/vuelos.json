@@ -1,0 +1,23 @@
+[
+    {
+        "id": "1",
+        "origin": "AAA",
+        "destination": "AAE",
+        "outboundDate": "05/08 20:30",
+        "inboundDate": "06/08 18:30"
+    },
+    {
+        "id": "2",
+        "origin": "AAE",
+        "destination": "AAM",
+        "outboundDate": "06/08 21:30",
+        "inboundDate": "06/08 23:30"
+    },
+    {
+        "id": "3",
+        "origin": "AAM",
+        "destination": "AAN",
+        "outboundDate": "07/08 22:30",
+        "inboundDate": "08/08 18:30"
+    }
+]
