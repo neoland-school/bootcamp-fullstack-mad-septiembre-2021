@@ -1,0 +1,16 @@
+.temperature_container {
+    display: flex;
+    gap: 10px;
+    color: white;
+    background-color: black;
+}
+input {
+    width: 300px;
+    border: 1px solid olivedrab;
+    background-color: black;
+    color: white;
+    padding-top: 15px;
+}
+label {
+    width: 100px;
+}

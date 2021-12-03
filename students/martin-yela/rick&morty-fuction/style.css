@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.card {
+    width: 200px;
+    height: 200px;
+    background-color: aqua;
+    border-radius: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 15px;
+}
+.card_container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+.searchName {
+    width: 40%;
+}
+.searchName__container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+/* .img {
+    display: none;
+    width: 150px;
+}
+.card:hover {
+    display: block;
+}
+.card:hover p {
+    display: none;
+} */

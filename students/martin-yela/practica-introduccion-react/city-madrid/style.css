@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+.bordes {
+    border: 1px solid black;
+    width: 150px;
+    background-color: cadetblue;
+    margin-top: 10px;
+    box-shadow: 5px 5px 15px 5px #000000;;
+}
+.input {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+.inp {
+    background-color: cadetblue;
+}
+.bordes:hover {
+    transform: scale(2);
+}

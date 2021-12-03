@@ -1,0 +1,13 @@
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: olivedrab;
+}
+select {
+    background-color: olivedrab;
+    border: none;
+}
+select:focus{ 
+    outline: none;
+}
